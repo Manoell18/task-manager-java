@@ -2,100 +2,51 @@
 
 Projeto desenvolvido para a disciplina de Linguagem de Programação II.
 
-## Descrição
+## Sobre
 
-O Task Manager é um sistema de gerenciamento de tarefas desenvolvido em Java para execução no terminal. O programa permite ao usuário cadastrar, buscar, listar, concluir e remover tarefas, facilitando a organização de atividades do dia a dia.
-
-As tarefas são armazenadas em um vetor com capacidade definida pelo usuário no início da execução.
+Sistema de gerenciamento de tarefas executado pelo terminal. Esta versão representa a evolução do projeto para a segunda unidade, com uma estrutura orientada a objetos mais completa.
 
 ## Funcionalidades
 
-- Cadastrar novas tarefas
-- Buscar tarefas pelo título
-- Listar todas as tarefas cadastradas
-- Marcar tarefas como concluídas
-- Remover tarefas específicas
-- Remover todas as tarefas concluídas
-- Controle de capacidade máxima de tarefas
-- Identificação do usuário responsável pela lista
+- Cadastro e edição de usuários
+- Cadastro de tarefas simples
+- Cadastro de tarefas recorrentes
+- Associação de tarefas a usuários responsáveis
+- Listagem de todas as tarefas
+- Listagem por status
+- Listagem por responsável
+- Conclusão e cancelamento de tarefas
+- Geração de próximas ocorrências para tarefas recorrentes
+- Sistema de notificações
+- Tratamento de exceções específicas
+- Testes unitários com JUnit
 
-## Estrutura do Projeto
+## Estrutura
 
-### Tarefa
-Classe responsável por representar uma tarefa.
+- `models/` — classes de domínio, enums e interface `Notificavel`
+- `exceptions/` — exceções específicas do sistema
+- `sistema/` — regras do sistema, controlador, interface de terminal e testes
 
-**Atributos:**
-- Título
-- Descrição
-- Data
-- Status (Pendente ou Concluída)
+## Conceitos de POO aplicados
 
-**Métodos:**
-- `marcarConcluida()`
-- `toString()`
-
-### GerenciadorDeTarefas
-Classe responsável pelo gerenciamento da lista de tarefas.
-
-**Métodos principais:**
-- `criarNovaTarefa()`
-- `removerTarefa()`
-- `buscarTarefa()`
-- `marcarTarefaConcluida()`
-- `removerTarefasConcluidas()`
-- `listarTarefas()`
-
-### Main
-Classe principal responsável pela interação com o usuário através de um menu no terminal.
-
-## Menu do Sistema
-
-```text
-1 - Cadastrar Tarefa
-2 - Remover Tarefa
-3 - Remover Tarefas Concluídas
-4 - Marcar Tarefa Como Concluída
-5 - Buscar Tarefa
-6 - Listar Tarefas
-0 - Encerrar Programa
-```
-
-## Tecnologias Utilizadas
-
-- Java
-- Eclipse IDE
-- Git
-- GitHub
-
-## Como Executar
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/SEU-USUARIO/task-manager-java.git
-```
-
-2. Abra o projeto no Eclipse.
-
-3. Execute a classe `Main.java`.
-
-4. Informe:
-   - Seu nome
-   - A quantidade máxima de tarefas
-
-5. Utilize o menu para gerenciar suas tarefas.
-
-## Integrantes
-
-- Manoel Vieira
-
-## Conceitos Aplicados
-
-- Programação Orientada a Objetos (POO)
-- Classes e Objetos
 - Encapsulamento
-- Vetores
-- Métodos
-- Estruturas de Repetição
-- Estruturas Condicionais
-- Manipulação de Strings
+- Herança
+- Classe abstrata
+- Polimorfismo
+- Interface
+- Enum
+- Coleções (`List` e `Map`)
+- Exceções personalizadas
+- Testes unitários
+
+## Execução
+
+A classe principal é:
+
+`sistema.Main`
+
+O projeto utiliza recursos disponíveis a partir do Java 11, como `String.isBlank()`.
+
+## Autor
+
+Manoel Vieira
